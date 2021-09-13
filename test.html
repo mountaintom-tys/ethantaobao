@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containner{
+            position: relative;
+            height: 280px;
+            width: 520px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .rotate{
+            position: relative;
+            /* 必须要提前设置left值，否则页面刚加载时切换成第二张图片将不会有动画效果 */
+            left: 0;
+        }
+        .rotate-transition{
+            transition: left 0.5s ease-in 0s;
+        }
+        .rotate img{
+            display: block;
+            width: 520px;
+            float: left;
+        }
+        /* 设置轮播图圆点的定位及样式 */
+        .rotate-button-ul{
+            position: absolute;
+            top:240px;
+            left:210px
+        }
+        .rotate-button-ul li{
+            float: left;
+            margin-right: 10px;
+            list-style: none;
+            height: 10px;
+            width: 10px;
+            border:1px solid #b4afaf;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="containner">
+        <div class="rotate rotate-transition">
+            <img src="img/1.jpg">
+            <img src="img/2.jpg">
+            <img src="img/3.jpg">
+            <img src="img/1.jpg">
+        </div>
+        <ul class="rotate-button-ul">
+            <!-- this表示当前元素的对象，data-*，可以用来自定义属性 -->
+            <li class="rotate-button-li" data-index="0" onclick="transRotateButton(this)"></li>
+            <li class="rotate-button-li" data-index="1" onclick="transRotateButton(this)"></li>
+            <li class="rotate-button-li" data-index="2" onclick="transRotateButton(this)"></li>
+        </ul>
+    </div>
+    <script>
+        var round=1;//表示将要切换到第1张图片，图片：0，1，2，3
+        var imgs=document.getElementsByTagName("img");
+        var rotate = document.getElementsByClassName("rotate")[0];
+        rotate.style.width=imgs.length*520+'px';//根据图片个数设置轮播图容器的宽度
+        var roundSwitch=true;//默认开启轮播开关
+        var index=0;//圆点下标：0，1，2，3
+        showRotateButtonLi(index);//默认选中第0个圆点
+        setInterval("roundPicture()",2000);
+        function roundPicture(){
+            if(roundSwitch){
+                index=round;//将要选中的圆点下标对应将要切换的图片序号
+                if(round==imgs.length-1){//表示即将展示最后一张图片
+                    index=0;//此时将圆点下标设置为第0个圆点
+                }
+                if(round==imgs.length){//表示目前正在展示最后一张图片
+                    round=0;//使偏移量归为0，表示将要展示第0张图片
+                    rotate.setAttribute("class","rotate");//关闭切换动画
+                    index=0;//表示即将展示第0张图片，将圆点下标仍然设置为第0个圆点
+                }else{
+                    rotate.setAttribute("class","rotate rotate-transition");//开启切换动画
+                }
+                rotate.style.left=-round*520+'px';
+                showRotateButtonLi(index);
+                round+=1;//将要展示的图片次序加1 
+            }
+        }
+
+        //点击圆点的方法
+        function transRotateButton(obj){
+            var dataIndex=parseInt(obj.getAttribute('data-index'));//获取元素的data-index属性
+            showRotateButtonLi(dataIndex);
+            round=dataIndex;//round表示当前正在显示第几张图片
+            roundSwitch=true;//点击时开启轮播开关,进行点击切换图片
+            roundPicture();
+            roundSwitch=false;//关闭轮播开关，停止自动轮播
+            setTimeout(function(){
+                roundSwitch=true;//3秒未点击圆点，开启轮播开关，开始自动轮播
+            },3000)
+
+        }
+
+        //设置下标为index的圆点背景颜色
+        function showRotateButtonLi(n){
+            var rotateButtonLis=document.getElementsByClassName("rotate-button-li");
+            for(var i=0;i<rotateButtonLis.length;i++){
+                rotateButtonLis[i].style.background='none';
+            }
+            rotateButtonLis[n].style.background='#F40';
+        }
+    </script>
+</body>
+</html>

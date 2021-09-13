@@ -1,0 +1,151 @@
+*{
+    /* border: 1px solid black; */
+    margin: 0px;
+    padding: 0px;
+}
+i{
+    display:none;
+}
+.body{
+    font-family: arial, Helvetica, sans-serif;
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+.containner>div{
+    width: 100%;
+}
+.nav{
+    height: 36px;
+    background-color: #F5F5F5;
+}
+.nav-content{
+    height: 35px;
+    margin: 0px 244.6px;
+}
+.nav-content ul li{
+    line-height: 35px;
+}
+.nav-content ul li>a{
+    margin-right: 13px;
+}
+.nav-content ul li a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #6C6C6C;
+}
+.nav-content ul li>a:hover{
+    color: #F40;
+}
+.nav-content>ul{
+    height: 35px;
+}
+.site-nav-bd-l{
+    float: left;
+}
+.site-nav-bd-l li{
+    float: left;
+    list-style: none;
+}
+.site-nav-bd-l li:first-child a{
+    color: #F40;
+}
+.site-nav-bd-r li:first-child a{
+    color: #F40;
+}
+.site-nav-bd-r{
+    float: right;
+}
+.site-nav-bd-r li{
+    float: left;
+    list-style: none;
+}
+.nav-content ul li .menu-list{
+    position: relative;
+    display: none;
+}
+.nav-content ul li:hover .menu-list{
+    display: block;
+}
+.nav-content ul li .menu-list .menu-panel{
+    padding: 8px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: normal;
+    border: 1px solid #EEE;
+    background: #FFF;
+}
+.nav-content ul li .menu-list .menu-panel a{
+    padding: 0 5px;
+    line-height: 28px;
+    display: block;
+    white-space: nowrap;
+    color: #6C6C6C;
+}
+.nav-content ul li .menu-list .menu-panel a:hover{
+    color: #6C6C6C;
+    background: #F5F5F5;
+}
+.nav-content ul li .menu-list .site-nav{
+    width: 800px;
+    position: absolute;
+    right: 0;
+    left: auto;
+}
+.nav-content ul li .menu-list .site-nav a{
+    float: left;
+}
+.banner{
+    height: 89.25px;
+    background-color: #4ad2aa;
+}
+.banner-img{
+    width: 1190px;
+    margin: 0 auto;
+    display: block;
+}
+.containner .rotate{
+    position: relative;
+    height: 280px;
+    width: 520px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.well{
+    width: 3140px;
+    position: relative;
+    transition: left 0.5s ease-in 0s;
+}
+.rotate .well div{
+    width: 520px;
+    float: left;
+}
+/* 设置轮播图圆点的定位及样式 */
+.rotate-button-ul{
+    position: absolute;
+    top:240px;
+    left:210px
+}
+.rotate-button-ul li{
+    float: left;
+    margin-right: 10px;
+    list-style: none;
+    height: 10px;
+    width: 10px;
+    border:1px solid #b4afaf;
+    border-radius: 50%;
+}
+.search{
+    height: 76px;
+    padding: 22px 0px 23px;
+}
+
+.tab{
+    height: 36px;
+}
+.content-containner{
+    height: 530px;
+}
+.content{
+    height: 528px;
+    margin: 0px 124px 0px;
+}

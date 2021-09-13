@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/taobao.css">
+    <!-- <script src="js/fontawesome.js"></script> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="containner">
+        <div class="nav">
+            <div class="nav-content">
+                <ul class="site-nav-bd-l">
+                    <li><a href="#">亲，请登录</a></li>
+                    <li><a href="#">免费注册</a></li>
+                    <li><a href="#">手机逛淘宝</a></li>
+                </ul>
+                <ul class="site-nav-bd-r">
+                    <li><a href="#">淘宝网首页</a></li>
+                    <li>
+                        <a href="#">我的淘宝<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="menu-list">
+                            <div class="menu-panel">
+                                <a href="#">已买到的宝贝</a>
+                                <a href="#">我的足迹</a>
+                                <a href="#">我的上新</a>
+                                <a href="#">淘宝达人</a>
+                                <a href="#">爱逛街 </a>
+                                <a href="#">新欢</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">购物车
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a></li>
+                    <li><a href="#">收藏夹<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="menu-list">
+                            <div class="menu-panel">
+                                <a href="#">收藏的宝贝</a>
+                                <a href="#">收藏的店铺</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">商品分类</a></li>
+                    <li><a href="#">卖家中心<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="menu-list">
+                            <div class="menu-panel">
+                                <a href="#">免费开店</a>
+                                <a href="#">已卖出的宝贝</a>
+                                <a href="#">出售中的宝贝</a>
+                                <a href="#">卖家服务市场</a>
+                                <a href="#">卖家培训中心 </a>
+                            </div>
+                        </div>
+                        </li>
+                    <li><a href="#">联系客服</a></li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                            网站导航
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <div class="menu-list">
+                            <div class="menu-panel site-nav">
+                                <a href="#">免费开店</a>
+                                <a href="#">已卖出的宝贝</a>
+                                <a href="#">出售中的宝贝</a>
+                                <a href="#">卖家服务市场</a>
+                                <a href="#">卖家培训中心 </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner">
+            <img class="banner-img" src="img/banner.png" alt="">
+        </div>
+        <div class="rotate">
+           <div class="well">
+            <div class="rotate-panel"><img src="img/1.jpg" alt=""></div>
+            <div class="rotate-panel"><img src="img/2.jpg" alt=""></div>
+            <div class="rotate-panel"><img src="img/3.jpg" alt=""></div>
+            <div class="rotate-panel"><img src="img/4.jpg" alt=""></div>
+            <div class="rotate-panel"><img src="img/5.png" alt=""></div>
+            <div class="rotate-panel" style="transition: none;"><img src="img/1.jpg" alt=""></div>
+           </div>
+            <ul class="rotate-button-ul">
+                <!-- this表示当前元素的对象，data-*，可以用来自定义属性 -->
+                <li class="rotate-button-li" data-index="0" onclick="transRotateButton(this)"></li>
+                <li class="rotate-button-li" data-index="1" onclick="transRotateButton(this)"></li>
+                <li class="rotate-button-li" data-index="2" onclick="transRotateButton(this)"></li>
+                <li class="rotate-button-li" data-index="3" onclick="transRotateButton(this)"></li>
+                <li class="rotate-button-li" data-index="4" onclick="transRotateButton(this)"></li>
+            </ul>
+        </div>
+        <div class="search">
+        </div>
+        
+        <div class="tab"></div>
+        <div class="content-containner">
+            <div class="content">
+
+            </div>
+        </div>
+    </div>
+    <script src="js/taobao.js"></script>
+</body>
+
+</html>
